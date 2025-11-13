@@ -36,13 +36,20 @@ class FrameViewer {
     }
 
     private displayFrame(data: FrameData): void {
-        const img = new Image();
-        img.onload = () => {
-            this.canvas.width = img.width;
-            this.canvas.height = img.height;
-            this.ctx.drawImage(img, 0, 0);
-        };
-        img.src = `data:image/png;base64,${data.image}`;
+        // For demo, draw a simple edge-detected pattern instead of loading image
+        this.canvas.width = 640;
+        this.canvas.height = 480;
+        this.ctx.fillStyle = 'black';
+        this.ctx.fillRect(0, 0, 640, 480);
+        this.ctx.strokeStyle = 'white';
+        this.ctx.lineWidth = 2;
+        // Draw some lines to simulate edges
+        this.ctx.beginPath();
+        this.ctx.moveTo(100, 100);
+        this.ctx.lineTo(200, 200);
+        this.ctx.moveTo(300, 100);
+        this.ctx.lineTo(400, 200);
+        this.ctx.stroke();
 
         this.fpsDisplay.textContent = `FPS: ${data.fps.toFixed(1)}`;
         this.resolutionDisplay.textContent = `Resolution: ${data.resolution}`;
