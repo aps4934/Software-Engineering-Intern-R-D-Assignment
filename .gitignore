@@ -1,0 +1,32 @@
+# Android
+*.apk
+*.aar
+*.dex
+*.so
+*.o
+*.a
+*.log
+.gradle/
+build/
+local.properties
+captures/
+*.jks
+*.keystore
+
+# OpenCV
+opencv/
+
+# Node.js / TypeScript
+node_modules/
+*.tsbuildinfo
+dist/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
