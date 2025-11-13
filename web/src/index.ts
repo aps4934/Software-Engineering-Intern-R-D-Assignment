@@ -51,6 +51,7 @@ class FrameViewer {
     private getSampleBase64Image(): string {
         // Placeholder base64 string for a sample edge-detected image
         // In practice, this would be generated from the Android app
+        // Using a larger sample image for demo
         return "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==";
     }
 }
